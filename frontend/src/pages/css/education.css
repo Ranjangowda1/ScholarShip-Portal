@@ -1,0 +1,347 @@
+/* Container and page layout */
+.page-container {
+  padding: 40px 20px;
+  background: #f9fafb;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Progress bar */
+.progress-container {
+  margin-bottom: 32px;
+}
+
+.progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progress-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #6b7280; /* gray-500 */
+  cursor: default;
+}
+
+.progress-step-active {
+  color: #4338ca; /* indigo-700 */
+  font-weight: 700;
+}
+
+.progress-step-completed {
+  color: #059669; /* emerald-600 */
+  font-weight: 700;
+}
+
+.progress-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #d1d5db; /* gray-300 */
+  font-weight: 700;
+  font-size: 14px;
+  background-color: white;
+  color: #6b7280;
+}
+
+.progress-circle-active {
+  border-color: #4338ca;
+  background-color: #4338ca;
+  color: white;
+}
+
+.progress-circle-completed {
+  border-color: #059669;
+  background-color: #059669;
+  color: white;
+}
+
+.progress-line {
+  flex-grow: 1;
+  height: 2px;
+  margin: 0 12px;
+  background-color: #d1d5db;
+}
+
+.progress-line-active {
+  background: linear-gradient(90deg, #4338ca 0%, #059669 100%);
+}
+
+.progress-line-inactive {
+  background-color: #d1d5db;
+}
+
+/* Card */
+.card {
+  background: white;
+  padding: 24px 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+}
+
+/* Card header */
+.card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.icon-container {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.icon-container-blue {
+  background-color: #bfdbfe;
+}
+
+.icon-container-purple {
+  background-color: #ddd6fe;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.subtitle {
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Form group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+/* Inputs and selects */
+.input,
+.input-large,
+.select {
+  width: 90%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background-color: #fff;     /* White background */
+  color: #000;                /* Black text */
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-error {
+  border-color: #dc2626;
+  background-color: #fff0f0;
+  color: #000;
+}
+
+.input:focus,
+.input-large:focus,
+.select:focus {
+  outline: none;
+  border-color: #2563eb; /* Blue outline */
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3); /* Blue focus ring */
+}
+
+/* Grid for 2 columns */
+.grid-cols-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* File upload area */
+.file-upload-area {
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+  padding: 24px;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+.file-upload-area-active {
+  border-color: #4338ca;
+  background-color: #eef2ff;
+}
+
+.file-upload-area-success {
+  border-color: #16a34a;
+  background-color: #dcfce7;
+}
+
+.file-upload-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+}
+
+.file-upload-content {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #9ca3af;
+  font-weight: 600;
+  user-select: none;
+}
+
+.file-upload-content-success {
+  flex-direction: row;
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.file-upload-text {
+  font-size: 14px;
+  margin: 0;
+}
+
+.file-upload-subtext {
+  font-size: 12px;
+  margin: 0;
+  color: #6b7280;
+}
+
+/* Error and success messages */
+.error-message,
+.success-message {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+.error-message {
+  color: #dc2626;
+}
+
+.success-message {
+  color: #16a34a;
+}
+
+/* Info box */
+.info-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background-color: #eff6ff;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 24px 0;
+  font-size: 14px;
+  color: #2563eb;
+}
+
+.info-box-title {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.info-box-text {
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Buttons */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  gap: 12px;
+}
+
+.button-container-end {
+  justify-content: flex-end;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.button-primary {
+  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+  color: white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.button-primary:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #4338ca 100%);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.button-secondary {
+  background: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%);
+  color: white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.button-secondary:hover {
+  background: linear-gradient(135deg, #6d28d9 0%, #db2777 100%);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.button-outline {
+  background: white;
+  color: #4338ca;
+  border: 2px solid #4338ca;
+  font-weight: 700;
+}
+
+.button-outline:hover {
+  background-color: #f9fafb;
+}
+
+/* Utility */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
