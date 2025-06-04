@@ -45,6 +45,7 @@ pandas==2.0.3
 pbs-installer==2025.4.9
 pdm==2.20.1
 pillow==10.4.0
+pipdeptree==2.24.0
 platformdirs==4.3.6
 prompt_toolkit==3.0.51
 Pygments==2.19.1
